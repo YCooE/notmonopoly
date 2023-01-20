@@ -16,8 +16,9 @@ Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
 
 p_list = [Peter, Billy, Charlotte, Sweedal]
 
-own_status = [True, False, False, False, False, False, False, False, False]
-owner_name = [None, None, None, None, None, None, None, None, None]
+own_status = [False] * 9
+own_status[0] = True        # GO Space is not buyable
+owner_name = [None] * 9
 
 
 for i in data:
@@ -25,13 +26,27 @@ for i in data:
 
 print(data[1]['name'])
 
-eval('Peter').move(rolls1[1])
-Peter.position_execution(data, own_status, owner_name)
+counter = 0
+for i in range(len(rolls1)):
+    player_turn = p_list[counter]
 
+    player_turn.move(rolls1[i])
+    player_turn.position_execution(data, own_status, owner_name, locals())
+    counter += 1
+    if counter == 4:
+        counter = 0
+    
+    if player_turn.status == True:
+        break
 
-print(own_status)
-print(owner_name)
-print(Peter.balance)
+p_list.remove(player_turn)
 
-Peter.move(9)
-Peter.position_execution(data, own_status, owner_name)
+max_val = 0
+max_player = None
+for i in range(len(p_list)):
+    m = p_list[i].balance
+    if m > max_val:
+        max_val = m
+        max_player = p_list[i]
+
+print(f"Winner of notmonopoly is {max_player.name}, with a score of {max_val}")

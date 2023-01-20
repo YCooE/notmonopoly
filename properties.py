@@ -1,3 +1,4 @@
+# Not used for current scope of project
 class Properties:
     def __init__(self, name, cost, color, owned, owner):
         self.name = name

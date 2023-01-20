@@ -10,13 +10,14 @@ class Player:
         self.position += spaces
         return self.position
     
-    def position_execution(self, board, own_status, owner_name):
+    def position_execution(self, board, own_status, owner_name, scope):
 
         if self.position > 8:
             self.position = self.position % 9
             self.balance += 1
 
         board_space = board[self.position]
+        print(f"Player {self.name} turn")
 
         print(f"You are on {board_space['name']}, position {self.position}")
 
@@ -24,10 +25,10 @@ class Player:
             self.balance -= board_space['price']
             own_status[self.position] = True
             owner_name[self.position] = self.name
-        elif board_space['type'] == 'property':
-            #self.charge(board_space, owner_name)
+        elif board_space['type'] == 'property' and self.name != owner_name[self.position]:
+            self.charge(board_space, owner_name, scope)
 
-            eval(owner_name[self.position]).balance += board_space['price']
+            #eval(owner_name[self.position], scope).balance += board_space['price']
 
 
     def add(self, amount):
@@ -40,10 +41,10 @@ class Player:
         if self.balance < 0:
             self.status = True
 
-    def charge(self, property, owner_name):
+    def charge(self, property, owner_name, scope):
         cost = property['price']
 
         self.reduce(cost)
 
-        eval(owner_name[self.position]).add(cost)
+        eval(owner_name[self.position], scope).add(cost)
     
