@@ -1,4 +1,5 @@
 # Not used for current scope of project
+# expandable if properties are put in random order
 class Properties:
     def __init__(self, name, cost, color, owned, owner):
         self.name = name
