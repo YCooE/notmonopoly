@@ -1,44 +1,25 @@
-## Woven coding test
+Woven Monopoly
 
-Your task is to write an application to play the game of Woven Monopoly.
-
-In Woven Monopoly, when the dice rolls are set ahead of time, the game is deterministic.
-
-### Game rules
-* There are four players who take turns in the following order:
-  * Peter
-  * Billy
-  * Charlotte
-  * Sweedal
-* Each player starts with $16
-* Everybody starts on GO
-* You get $1 when you pass GO (this excludes your starting move)
-* If you land on a property, you must buy it
-* If you land on an owned property, you must pay rent to the owner
-* If the same owner owns all property of the same colour, the rent is doubled
-* Once someone is bankrupt, whoever has the most money remaining is the winner
-* There are no chance cards, jail or stations
-* The board wraps around (i.e. you get to the last space, the next space is the first space)
+The code is written in Python 3.9.7
+### How it works
+Deterministic dice rolls are provided in addition to the game board. The dice roll files are included in the test.py file where there are 12 tests. The file can be run like any normal python files. The tests are not all inclusive and include a bit of repetition. Additionally, the two rolls are included in the wovenmonopoly.py file where it is possible to comment out each game. However, do not comment out both as global variables are shared here.
 
 
-### Your task
-* Load in the board from board.json
-* Implement game logic as per the rules
-* Load in the given dice rolls files and simulate the game
-  * Who would win each game?
-  * How much money does everybody end up with?
-  * What spaces does everybody finish on?
+### Design decisions
+The game is pretty straight forward. I created a player class in playerdef containing the relevant information to keep track of. A player moves a certain amount of positions and then the positions effect is executed. The GO tile wrap around is handled with modulus and adding additional currency to the player. 
+The properties are handled a bit differently, I was thinking about making properties a class by itself and then expanding the current player class with a field to see each players owned properties. However, as Woven Monopoly is a pretty simple game with a board that does not change state, I think it was easier to add a couple of arrays keeping track of owned status and its owner. Because of this, I did not utilise the Colour field in the board.json file as I just kept track of its position. I included a properties.py file to show how a possible extension to the program could look, especially if the tiles on the Monopoly game was randomised.
+Bankrupt only happens if balance is negative, not zero.
 
 
-The specifics and implementation of this code is completely up to you!
+### Results
+Game 1 - 
+Peter wins with a score of 40 and ended on Lanzhou Beef Noodle
+Billy was on Lanzhou Beef Noodles with 18 coins
+Charlotte was on The Burval with 0 coins
+Sweedal was on Gami Chicken with -5
 
-### What we are looking for:
-* We are a Ruby house, however feel free to pick the language you feel you are strongest in.
-* Code that is well thought out and tested
-* Clean and readable code
-* Extensibility should be considered
-* A git commit-history would be preferred, with small changes committed often so we can see your approach
-
-Please include a readme with any additional information you would like to include, including instructions on how to test and execute your code.  You may wish to use it to explain any design decisions.
-
-Despite this being a small command line app, please approach this as you would a production problem using whatever approach to coding and testing you feel appropriate.
+Game 2 -
+Billy wins with a score of 27 and ended on The Grand Tofu
+Peter was on Massizim with 5 coins
+Charlotte was on GO with 21 coins
+Sweedal was on Massizim with -3 coins
