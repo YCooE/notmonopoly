@@ -1,9 +1,8 @@
 class Player:
-    def __init__(self, name, balance, position, properties, status):
+    def __init__(self, name, balance, position, status):
         self.name = name             # string
         self.balance = balance       # int
         self.position = position     # int
-        self.properties = properties # []
         self.status = status         # bool Whether they have lost due to insufficient funds
     
     def move(self, spaces):
@@ -11,15 +10,14 @@ class Player:
         return self.position
     
     def position_execution(self, board, own_status, owner_name, scope):
-
+        print(f"Player {self.name} has {self.balance} coins")
         if self.position >  8:
             self.position = self.position % 9
             self.balance += 1
 
         board_space = board[self.position]
         print(f"Player {self.name} turn")
-        print(f"Player {self.name} has {self.balance}")
-        print(f"You are on {board_space['name']}, position {self.position}")
+        print(f"{self.name} is on {board_space['name']}, position {self.position}")
         # Double charge boolean flag, passed to charge
         double_charge = False
         # if status of owner is set to False
@@ -42,6 +40,8 @@ class Player:
                 double_charge = True
             
             self.charge(board_space, owner_name, scope, double_charge)
+
+        print(f"Player {self.name} has {self.balance} coins")
 
 
     def add(self, amount):

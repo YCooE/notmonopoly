@@ -1,7 +1,7 @@
 import unittest
-from notmonopoly import game as game
-from notmonopoly import rolls1 as r1
-from notmonopoly import rolls2 as r2
+from wovenmonopoly import game as game
+from wovenmonopoly import rolls1 as r1
+from wovenmonopoly import rolls2 as r2
 import playerdef as p_init
 
 class TestsNames(unittest.TestCase):
@@ -9,10 +9,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
         rolls = [1, 2, 3, 4, 4, 4, 4, 4]
 
@@ -22,10 +22,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
         rolls = [1, 2, 3, 4, 4, 4, 4, 4]
 
@@ -36,10 +36,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
         rolls = [1, 2, 3, 4, 4, 4, 4, 4]
 
@@ -50,10 +50,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
         rolls = [1, 2, 3, 4, 4, 4, 4, 4]
 
@@ -66,10 +66,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
 
         max_play1, max_val1, own_name1, own_stat1 = game(r1, own_status, owner_name, locals(), p_list)
@@ -80,10 +80,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
 
         max_play1, max_val1, own_name1, own_stat1 = game(r1, own_status, owner_name, locals(), p_list)
@@ -93,10 +93,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
 
         max_play1, max_val1, own_name1, own_stat1 = game(r1, own_status, owner_name, locals(), p_list)
@@ -106,10 +106,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
 
         max_play1, max_val1, own_name1, own_stat1 = game(r1, own_status, owner_name, locals(), p_list)
@@ -119,10 +119,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
 
         max_play1, max_val1, own_name1, own_stat1 = game(r2, own_status, owner_name, locals(), p_list)
@@ -133,10 +133,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
 
         max_play1, max_val1, own_name1, own_stat1 = game(r2, own_status, owner_name, locals(), p_list)
@@ -147,10 +147,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
 
         max_play1, max_val1, own_name1, own_stat1 = game(r2, own_status, owner_name, locals(), p_list)
@@ -161,10 +161,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
 
         max_play1, max_val1, own_name1, own_stat1 = game(r2, own_status, owner_name, locals(), p_list)
@@ -174,10 +174,10 @@ class TestsNames(unittest.TestCase):
         own_status = [False] * 9
         own_status[0] = True
         owner_name = [None] * 9
-        Peter = p_init.Player("Peter", 16, 0, [], False)
-        Billy = p_init.Player("Billy", 16, 0, [], False)
-        Charlotte = p_init.Player("Charlotte", 16, 0, [], False)
-        Sweedal = p_init.Player("Sweedal", 16, 0, [], False)
+        Peter = p_init.Player("Peter", 16, 0, False)
+        Billy = p_init.Player("Billy", 16, 0, False)
+        Charlotte = p_init.Player("Charlotte", 16, 0, False)
+        Sweedal = p_init.Player("Sweedal", 16, 0, False)
         p_list = [Peter, Billy, Charlotte, Sweedal]
         rolls = [9, 9, 9, 9, 9, 9, 9, 9]
 
