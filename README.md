@@ -23,3 +23,5 @@ Billy wins with a score of 27 and ended on The Grand Tofu
 Peter was on Massizim with 5 coins
 Charlotte was on GO with 21 coins
 Sweedal was on Massizim with -3 coins
+
+Part of a coding test
